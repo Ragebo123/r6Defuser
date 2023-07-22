@@ -44,7 +44,15 @@ startButton.addEventListener('mousedown', () => {
   stopInterval = setTimeout(startDefuse, 5000);
 });
 
+startButton.addEventListener('touchstart', () => {
+  stopInterval = setTimeout(startDefuse, 5000);
+});
+
 startButton.addEventListener('mouseup', () => {
+  clearTimeout(stopInterval);
+});
+
+startButton.addEventListener('touchend', () => {
   clearTimeout(stopInterval);
 });
 
@@ -52,6 +60,14 @@ stopButton.addEventListener('mousedown', () => {
   stopDefuse();
 });
 
+stopButton.addEventListener('touchstart', () => {
+  stopDefuse();
+});
+
 stopButton.addEventListener('mouseup', () => {
+  clearTimeout(stopInterval);
+});
+
+stopButton.addEventListener('touchend', () => {
   clearTimeout(stopInterval);
 });
