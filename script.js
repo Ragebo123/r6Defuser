@@ -19,7 +19,7 @@ function startDefuse() {
     if (elapsedTime >= 20) {
       clearInterval(defuseInterval);
       defusing = false;
-      statusDisplay.innerText = 'Defuser has been deactivated!';
+      statusDisplay.innerText = 'Bomb has been Defused!';
       startButton.innerText = 'Hold to Start Defuse (5 sec)';
     } else {
       let remainingTime = 20 - elapsedTime;
@@ -34,7 +34,7 @@ function stopDefuse() {
   if (defusing) {
     clearInterval(defuseInterval);
     defusing = false;
-    statusDisplay.innerText = 'Defuser defuse attempt stopped!';
+    statusDisplay.innerText = 'Defuser Stopped!';
     timerDisplay.innerText = '00:00';
     startButton.innerText = 'Hold to Start Defuse (5 sec)';
   }
